@@ -54,7 +54,7 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
 # ファイルのコピー
-COPY ./infra/docker/php/php.ini /etc/opt/remi/php81/php.ini
+COPY ./infra/docker/php/php.ini /etc/opt/remi/php82/php.ini
 COPY ./infra/docker/apache/vhost.conf /etc/httpd/conf.d/vhost.conf
 #COPY ./infra/docker/apache/rewrite.conf /etc/httpd/conf.modules.d/rewrite.conf
 
