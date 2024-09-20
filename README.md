@@ -1,5 +1,6 @@
 # docker
 Docker environement setup for AWS Linux 2, Apache, PHP, MySQL Server, PHPMYADMIN
+
 The Following Docker Script will Install Apache, PHP, MySQL Server, PHPMYADMIN in AWS Linux 2
 
 1. Create Docker image and container to confirm.
