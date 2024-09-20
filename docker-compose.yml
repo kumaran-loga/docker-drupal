@@ -1,0 +1,41 @@
+version: "3.8"
+volumes:
+  db-store:
+services:
+  web:
+    build:
+      context: .
+      dockerfile: ./infra/docker/php/Dockerfile
+    restart: always
+    ports:
+      - "80:80"
+    volumes:
+      - ./backend/toyo-jlp:/home/toyo/toyo-jlp
+      - ./logs/apache:/var/log/apache2
+    depends_on:
+      - db
+
+  db:
+    build:
+      context: .
+      dockerfile: ./infra/docker/mysql/Dockerfile
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-store:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: tugs!Tbjp2023
+      MYSQL_DATABASE: toyo_jlp
+      MYSQL_USER: toyo
+      MYSQL_PASSWORD: 1049Qm#@aAPVGsd
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: tugs!Tbjp2023
+    ports:
+      - "4081:80"
+    depends_on:
+      - db
