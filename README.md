@@ -4,14 +4,19 @@ Docker environement setup for AWS Linux 2, Apache, PHP, MySQL Server, PHPMYADMIN
 The Following Docker Script will Install Apache, PHP, MySQL Server, PHPMYADMIN in AWS Linux 2
 
 1. Create Docker image and container to confirm.
-	Open <Windows Power Shell＞ as Adminstrator
-	cd C:\dev　// change to work location of docker folder		
-	docker compose up -d --build
+	
+ Open <Windows Power Shell＞ as Adminstrator
+	
+ cd C:\dev　// change to work location of docker folder		
+	
+ docker compose up -d --build
 
-3. For Bash SQL login															
+
+2. For Bash SQL login															
 	docker exec -it dev-db-1 bash　
 
-4. Restore SQL backups 
+
+3. Restore SQL backups 
 	① Place the SQL Dump file in the below path
 		/infra/docker/mysql/test.sql	
 	② Copy SQL DUMP file to SQL Container
