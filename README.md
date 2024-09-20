@@ -35,18 +35,23 @@ The Following Docker Script will Install Apache, PHP, MySQL Server, PHPMYADMIN i
 4.For creating and giving privilages to SQL users.
 
   	a. bash login to sql container
+
   
 		docker exec -it dev-db-1 bash
   
-  	b. CREATE USER '<user-name>'@'%' IDENTIFIED BY '<user-password>';
+  
+   	b. CREATE USER '<user-name>'@'%' IDENTIFIED BY '<user-password>';
+
   
   	c. GRANT ALL PRIVILEGES ON *.* TO '<user-name>'@'%' WITH GRANT OPTION;
   	
-   	d. FLUSH PRIVILEGES;
+  
+    	d. FLUSH PRIVILEGES;
   	
-   	e. To confirm Grant access,
+   	
+    	e. To confirm Grant access,
       
-      	f. SHOW GRANTS FOR '<user-name>'@'%';
+      		SHOW GRANTS FOR '<user-name>'@'%';
 
 5. For bash Apache login
 
