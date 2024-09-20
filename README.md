@@ -5,18 +5,19 @@ The Following Docker Script will Install Apache, PHP, MySQL Server, PHPMYADMIN i
 
 1. Create Docker image and container to confirm.
 	
- Open <Windows Power Shell＞ as Adminstrator
+ 		Open <Windows Power Shell＞ as Adminstrator
 	
- cd C:\dev　// change to work location of docker folder		
+ 		cd C:\dev　// change to work location of docker folder		
 	
- docker compose up -d --build
+ 		docker compose up -d --build
 
 
 2. For Bash SQL login															
-	docker exec -it dev-db-1 bash　
+
+		docker exec -it dev-db-1 bash　
 
 
-3. Restore SQL backups 
+4. Restore SQL backups 
 	① Place the SQL Dump file in the below path
 		/infra/docker/mysql/test.sql	
 	② Copy SQL DUMP file to SQL Container
